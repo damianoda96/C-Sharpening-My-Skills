@@ -16,6 +16,30 @@ namespace test_console
         }
     }
 
+    class Animal
+    {
+        public virtual void Write()
+        {
+
+        }
+    }
+
+    class Dog : Animal
+    {
+        public override void Write()
+        {
+            Console.WriteLine("Woof");
+        }
+    }
+
+    class Cat : Animal
+    {
+        public override void Write()
+        {
+            Console.WriteLine("Meow");
+        }
+    }
+
     class MainClass
     {
         public static void Swap(int[] nums, int pos1, int pos2)
@@ -117,12 +141,14 @@ namespace test_console
 
             }
 
+            // --------- Sorting -----------
+
             for(int i = 0; i < users.Length; i++)
             {
                 Console.WriteLine("Name: {0}" , users[i].Name);
             }*/
 
-            int[] nums = { 1, 3, 6, 2, 0, 5, 9 };
+            /*int[] nums = { 1, 3, 6, 2, 0, 5, 9 };
 
             //nums = SelectionSort(nums);
             Quicksort(nums);
@@ -130,9 +156,19 @@ namespace test_console
             foreach (int num in nums)
             {
                 Console.WriteLine(num);
-            }
+            }*/
 
-            // sort this as fast as possible
+            // ------- Inheritance ---------
+
+            Animal dog = new Dog();
+            Animal cat = new Cat();
+
+            dog.Write();
+            cat.Write();
+
+            
+
+
 
 
         }
